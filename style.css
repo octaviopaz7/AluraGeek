@@ -1,0 +1,346 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Establece la altura mínima del cuerpo como 100vh para que ocupe al menos toda la altura de la ventana */
+  margin: 0; 
+  padding: 0;
+  font-family: 'Press Start 2P';
+  background: url("./imagenes/hyperspace.jpg") no-repeat center center/ cover fixed;
+}
+
+/* HEADER */
+.contenedorHeader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFD700;
+  padding: 1vh;
+}
+
+.h1Header, .h1Footer{
+  margin-left: 1vw;
+}
+
+/* MAIN */
+main {
+  flex-grow: 1; /* Permite que el elemento principal crezca para ocupar el espacio restante en el cuerpo */
+  display: flex;
+}
+
+
+/* SECCIÓN PRODUCTOS */
+.productos {
+  display: flex;
+  flex: 0.60; /* Hace que esta sección ocupe la mitad del espacio disponible en el contenedor principal */
+  padding: 5vh;
+  flex-direction: column;
+  align-items: center;
+  color: #FFD700;
+}
+
+/* Estilos para la barra de desplazamiento */
+.contenedorScroll {
+  overflow-y: auto; /* Agrega scroll vertical */
+  max-height: 90vh; /* Altura máxima del contenedor para mostrar el scroll */
+}
+
+.contenedorScroll::-webkit-scrollbar {
+  width: 1vw; /* Ancho de la barra de desplazamiento */
+}
+.contenedorScroll::-webkit-scrollbar-track {
+  background: #000; /* Color de fondo de la barra de desplazamiento */
+  border-radius: 2vw;
+}
+
+.contenedorScroll::-webkit-scrollbar-thumb {
+  background: #FFD700; /* Color del "thumb" de la barra de desplazamiento */
+  border-radius: 2vw; /* Bordes redondeados del "thumb" */
+}
+
+.contenedorScroll::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Cambia el color del "thumb" al pasar el ratón */
+}
+
+/* Estilos para las cards */
+.contenedorCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0; /* Corregir el espacio extra causado por los márgenes negativos de las cards */
+}
+
+.card {
+  flex: 0 0 calc(30% - 2vw); /* Calcula el ancho de cada card para que haya tres en una fila */
+  margin: 1vw; /* Espacio entre las cards */
+  border-radius: 1vw; 
+  overflow: hidden; /* Para ocultar cualquier contenido que exceda las dimensiones de la card */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  height: 40vh; /* Altura fija para todas las tarjetas */
+  border: 0.5vh solid #FFD700; 
+  background: url('https://i.pinimg.com/564x/23/eb/06/23eb06fc2442dc73dca4b2faa4c4f2e4.jpg') no-repeat center center/ cover;
+}
+
+.imagenesCards {
+  width: 90%;
+  height: 60%; /* Se ajusta automáticamente a la altura manteniendo la relación de aspecto */
+  border-radius: 1vw;
+}
+
+.cardContenedorInfo {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center;
+  padding: 4vh; /* Espaciado interno */
+
+}
+
+.nombreCard {
+  font-size: 2vh; 
+  color: #FFD700; 
+}
+
+.contenedorValue {
+  display: flex;
+  gap: 1vw;
+  font-size: 2vh; 
+  color: #FFD700; 
+}
+
+.precioCard {
+  font-weight: bold; 
+  font-size: 2vh;
+}
+
+.iconoBasura {
+  width: 1vw; 
+  height: 2vh; /* Mantiene la proporción de aspecto */
+  cursor: pointer; 
+  transition: color 0.3s ease; /* Transición suave del color al pasar el ratón */
+  background-color: #FFD700;
+}
+
+
+/* SECCIÓN FORMULARIO */
+.seccionForm {
+  display: flex;
+  flex: 0.40; /* Hace que esta sección ocupe la otra parte del espacio disponible en el contenedor principal */
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh;
+  color: #FFD700;
+}
+
+.formulario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh; /* Aumenta el espacio entre los elementos */
+}
+
+.inputs {
+  width: 20vw;
+  height: 4vh;
+  padding: 1vh; 
+  border: 0.4vh solid #FFD700; 
+  border-radius: 1vw;
+  font-size: 2vh; 
+  font-weight: bold;
+}
+
+.mensajeError {
+  color: #FFD700; /* Color rojo para los mensajes de error */
+  font-size: 1.5vh; /* Tamaño de fuente más pequeño para los mensajes de error */
+  font-weight: bold;
+}
+
+.contenedorBotones{
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  margin-top: 1vh;
+}
+
+.btnEnviar {
+  width: 10vw;
+  height: 6vh;
+  background-color: #FFD700; /* Color de fondo verde */
+  color: #000; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 2vh; /* Bordes redondeados */
+  font-size: 2.5vh; /* Tamaño de fuente */
+  font-weight: bold;
+  cursor: pointer; /* Cursor de puntero al pasar sobre el botón */
+}
+
+.btnEnviar:hover {
+  background-color: #7f7f7f; 
+  color: #FFD700; 
+}
+
+.btnLimpiar {
+  width: 10vw;
+  height: 6vh;
+  background-color: #000; /* Color de fondo rojo */
+  color: #FFD700; /* Texto blanco */
+  border: 0.1vw solid #FFD700; /* Sin borde */
+  border-radius: 2vh; /* Bordes redondeados */
+  font-size: 2.5vh; /* Tamaño de fuente */
+  font-weight: bold;
+  cursor: pointer; /* Cursor de puntero al pasar sobre el botón */
+}
+
+.btnLimpiar:hover {
+  background-color: #4b4b4b; 
+  color: #FFD700; 
+}
+
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #FFD700;
+  padding: 1vh;
+}
+
+.contenedorFooter {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.copyRight{
+  font-size: 1vh;
+  margin-top: 0;
+}
+
+
+/* MEDIA QUERYS*/
+
+@media (max-width: 1200px){
+  .card {
+    flex: 0 0 calc(45% - 1vw); /* Calcula el ancho de cada card para que haya tres en una fila */
+  }
+
+  .iconoBasura{
+    width: 2vw; 
+  }
+
+  .contenedorValue{
+    gap: 2vw;
+  }
+
+  .h1Formulario{
+    text-align: center;
+  }
+
+  .productos, .formulario{
+    padding: 0;
+  }
+
+  .inputs {
+    width: 30vw;
+  }
+
+  .btnEnviar, .btnLimpiar{
+    width: 15vw;
+  }
+}
+
+/* Estilos para dispositivos móviles con una anchura máxima de 767px */
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 0 0 calc(45% - 1vw); /* Calcula el ancho de cada card para que haya tres en una fila */
+  }
+
+  .iconoBasura{
+    width: 2vw;
+  }
+
+  .inputs {
+    width: 100%;
+  }
+
+  .btnEnviar, .btnLimpiar{
+    width: 20vw;
+    margin: 1vw;
+  }
+}
+
+/* Estilos para dispositivos móviles con una anchura máxima de 480px (como algunos teléfonos antiguos) */
+@media (max-width: 500px) {
+  .icon{ 
+    width: 10%;
+  }
+
+  .h1Header, .h1Footer, .h1Productos {
+    font-size: 3vh;
+  }
+
+  /* CARD */
+  .card {
+    flex: 0 0 calc(70% - 1vw); /* Calcula el ancho de cada card para que haya tres en una fila */
+  }
+
+  .precioCard, .nombreCard{
+    font-size: 2vh;
+  }
+
+  .iconoBasura{
+    margin-left: 3vw;
+    width: 4vw;
+  }
+
+  /* FORM */
+  .h1Formulario{
+    text-align: center;
+    font-size: 3vh;
+  }
+
+  .btnEnviar, .btnLimpiar{
+    width: 30vw;
+  }
+
+  .contenedorFooter{
+    justify-content: center;
+  }
+}
+  
+
+
+@media (max-width: 320px) {
+  .card {
+    flex: 0 0 calc(80% - 1vw); /* Calcula el ancho de cada card para que haya tres en una fila */
+  }
+
+  .iconoBasura{
+    width: 6vw;
+  }
+
+  .btnEnviar, .btnLimpiar {
+    width: 30vw;
+  }
+  
+  .h1Header, .h1Footer, .h1Productos, .h1Formulario {
+    font-size: 2.5vh;
+  }
+
+  .copyRight{
+    margin: 0;
+    font-size: 1.6vh;
+  }
+
+} 

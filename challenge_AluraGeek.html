@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Press Start 2P">
+  <title>AluraGeek</title>
+</head>
+
+<body>
+  <header>
+    <div class="contenedorHeader">
+      <img class="icon" src="./imagenes/icons8-corazón-del-pixel-48.png" alt="">
+      <img class="icon" src="./imagenes/icons8-corazón-del-pixel-48.png" alt="">
+      <img class="icon" src="./imagenes/icons8-corazón-del-pixel-48.png" alt="">
+      <h1 class="h1Header">AluraGeek</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="productos">
+      <h1 class="h1Productos">Mis Productos:</h1>
+
+      <div class="contenedorScroll">
+        <div class="contenedorCards" data-productos-lista>
+          <!-- Aquí van las cards -->
+        </div>
+      </div>
+
+    </section>
+
+    <section class="seccionForm">
+
+      <h1 class="h1Formulario">Agregar Producto:</h1>
+
+      <form action="" class="formulario" data-formulario>
+
+        <label for="nombre"></label>
+        <input class="inputs" id="nombre" type="text" placeholder="nombre..." required data-nombre>
+        <span class="mensajeError" id="errorNombre"></span>
+
+        <label for="precio"></label>
+        <input class="inputs" type="number" id="precio" placeholder="precio..." required data-precio>
+        <span class="mensajeError" id="errorPrecio"></span>
+
+        <label for="imagen"></label>
+        <input class="inputs" type="url" id="imagen" placeholder="imagen..." required data-imagen>
+        <span class="mensajeError" id="errorImagen"></span>
+
+        <div class="contenedorBotones">
+          <button class="btnEnviar" data-enviar>Enviar</button>
+          <button class="btnLimpiar" type="button" data-limpiar>Limpiar </button>
+        </div>
+
+      </form>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="contenedorFooter">
+      <img class="icon" src="./imagenes/icons8-corazón-del-pixel-48.png" alt="">
+      <img class="icon" src="./imagenes/icons8-corazón-del-pixel-48.png" alt="">
+      <img class="icon" src="./imagenes/icons8-corazón-del-pixel-48.png" alt="">
+      <h1 class="h1Footer">AluraGeek</h1>
+      </div>
+      <div class="contenedorCR">
+        <p class="copyRight">&copy Copyright OctavioPaz / Alura Latam 2024</p>
+      </div>
+  </footer>
+
+  <script src="/js/generarCards.js" type="module"></script>
+  <script src="/js/crearEliminarCards.js" type="module"></script>
+  <script src="/js/Validaciones.js" type="module"></script>
+</body>
+
+</html>

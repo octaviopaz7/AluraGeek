@@ -1,0 +1,112 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "Darth Maul",
+      "precio": 129,
+      "imagen": "https://www.bdaddik.com/12578-large_default/figura-de-coleccion-star-wars-darth-maul-attakus-110-sw028-2017.jpg"
+    },
+    {
+      "id": "2",
+      "nombre": "C-3PO",
+      "precio": 75,
+      "imagen": "https://www.bdaddik.com/9045-large_default/figura-de-coleccion-star-wars-c-3po-v3-attakus-110-sw040-2017.jpg"
+    },
+    {
+      "id": "3",
+      "nombre": "Yoda",
+      "precio": 95,
+      "imagen": "https://www.bdaddik.com/18771-large_default/figura-de-coleccion-attakus-star-wars-yoda-110-sw044-2023.jpg"
+    },
+    {
+      "id": "4",
+      "nombre": "Darth Vader",
+      "precio": 135,
+      "imagen": "https://www.bdaddik.com/15933-large_default/figura-de-coleccion-attakus-star-wars-darth-vader-v3-110-sw038.jpg"
+    },
+    {
+      "id": "5",
+      "nombre": "Kylo Ren",
+      "precio": 129,
+      "imagen": "https://www.bdaddik.com/9588-large_default/figura-de-coleccion-star-wars-kylo-ren-attakus-110-sw036-2017.jpg"
+    },
+    {
+      "id": "6",
+      "nombre": "Boba Fett",
+      "precio": 450,
+      "imagen": "https://www.bdaddik.com/26677-large_default/figura-de-coleccion-attakus-star-wars-boba-fett-15-sw111.jpg"
+    },
+    {
+      "id": "7",
+      "nombre": "R2-D2",
+      "precio": 73,
+      "imagen": "https://www.bdaddik.com/5956-large_default/figura-de-coleccion-star-wars-r2-d2-v3-attakus-110-sw039-2018.jpg"
+    },
+    {
+      "id": "8",
+      "nombre": "Chewbacca",
+      "precio": 99,
+      "imagen": "https://www.bdaddik.com/3853-large_default/figura-de-coleccion-star-wars-chewbacca-attakus-110-sw032-2017.jpg"
+    },
+    {
+      "id": "9",
+      "nombre": "Luke Jedi Knight",
+      "precio": 320,
+      "imagen": "https://www.bdaddik.com/427-large_default/figurine-de-collection-star-wars-luke-jedi-knight-attakus-1-5-c139-2005.jpg"
+    },
+    {
+      "id": "10",
+      "nombre": "BB-8",
+      "precio": 59,
+      "imagen": "https://www.bdaddik.com/15925-large_default/figura-de-coleccion-attakus-star-wars-bb-8-110-sw060.jpg"
+    },
+    {
+      "id": "11",
+      "nombre": "Mandalorian",
+      "precio": 189,
+      "imagen": "https://www.bdaddik.com/19274-large_default/figura-de-coleccion-attakus-star-wars-luke-el-mandaloriano-110-sw064.jpg"
+    },
+    {
+      "id": "12",
+      "nombre": "Jabba",
+      "precio": 349,
+      "imagen": "https://www.bdaddik.com/11426-large_default/figura-de-coleccion-star-wars-jabba-el-hutt-attakus-110-sw029.jpg"
+    },
+    {
+      "id": "13",
+      "nombre": "Cody",
+      "precio": 295,
+      "imagen": "https://www.bdaddik.com/423-large_default/figurine-de-collection-star-wars-cody-ready-to-fight-attakus-1-5-sw102-2011.jpg"
+    },
+    {
+      "id": "14",
+      "nombre": "Padme Amidala",
+      "precio": 309,
+      "imagen": "https://www.bdaddik.com/425-large_default/figurine-de-collection-star-wars-padme-amidala-attakus-1-5-c130-2001.jpg"
+    },
+    {
+      "id": "15",
+      "nombre": "Obi-Wan Kenobi",
+      "precio": 309,
+      "imagen": "https://www.bdaddik.com/419-large_default/figurine-de-collection-star-wars-obi-wan-kenobi-attakus-1-5-c126-2003.jpg"
+    },
+    {
+      "id": "16",
+      "nombre": "Tusken Raider",
+      "precio": 175,
+      "imagen": "https://www.bdaddik.com/19491-large_default/figura-de-coleccion-attakus-star-wars-luke-tusken-raider-110-sw063.jpg"
+    },
+    {
+      "id": "17",
+      "nombre": "Snoke",
+      "precio": 290,
+      "imagen": "https://www.bdaddik.com/13975-large_default/figura-de-coleccion-star-wars-snoke-en-su-trono-attakus-110-sw054.jpg"
+    },
+    {
+      "id": "18",
+      "nombre": "Sandtrooper",
+      "precio": 95,
+      "imagen": "https://www.bdaddik.com/3854-large_default/figura-de-coleccion-star-wars-sandtrooper-attakus-110-sw045-2017.jpg"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import { conexionAPI } from "./app.js";
+import { conexionAPI } from "../app.js";
 import { validarNombre, validarPrecio, validarImagen } from "./Validaciones.js";
 import { listarProductos } from "./generarCards.js";
 

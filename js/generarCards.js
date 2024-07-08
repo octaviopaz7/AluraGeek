@@ -1,4 +1,4 @@
-import { conexionAPI } from "./app.js";
+import { conexionAPI } from "../app.js";
 import { asignarEventListeners } from "./crearEliminarCards.js";
 
 const listaProductos = document.querySelector("[data-productos-lista]");

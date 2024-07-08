@@ -1,13 +1,13 @@
 //CARGA DE BASE DE DATOS
 async function cargarDB() {
-  const conexion = await fetch("http://localhost:3001/productos");
+  const conexion = await fetch("https://fake--api.vercel.app/productos");
   const conexionConvertida = conexion.json();
   return conexionConvertida;
 }
 
 //ENVIAR NUEVO PRODUCTO A LA BASE DE DATOS
 async function enviarProducto(nombre, precio, imagen) {
-  const listaDeProductos = await fetch("http://localhost:3001/productos");
+  const listaDeProductos = await fetch("https://fake--api.vercel.app/productos");
   const productos = await listaDeProductos.json();
 
    // Encontrar el máximo ID actual
@@ -21,7 +21,7 @@ async function enviarProducto(nombre, precio, imagen) {
    // Determinar el próximo ID disponible
    const nuevoId =  ultimoId + 1;
 
-  const conexion = await fetch("http://localhost:3001/productos",{
+  const conexion = await fetch("https://fake--api.vercel.app/productos",{
     method:"POST",
     headers: {"Content-type":"application/json"},
     body:JSON.stringify({
@@ -45,8 +45,6 @@ export const conexionAPI = {
   enviarProducto,
 }
 
-
-// COMANDO PARA INICIAR EL SERVIDOR ---->>>>  npx json-server --watch db.json --port 3001
 
 
 

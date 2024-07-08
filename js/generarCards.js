@@ -19,9 +19,10 @@ export function crearCard(imagen,nombre,precio,id) {
   return card;
 }
 
-async function listarProductos(){
+export async function listarProductos(){
   try {
     const productosAPI = await conexionAPI.cargarDB();
+    listaProductos.innerHTML = ''; // Limpiar la lista de productos
     
     productosAPI.forEach(card => listaProductos.appendChild(crearCard(card.imagen,card.nombre,card.precio,card.id)));
      asignarEventListeners();

@@ -1,5 +1,6 @@
 import { conexionAPI } from "./app.js";
-import { validarNombre,validarPrecio,validarImagen } from "./Validaciones.js";
+import { validarNombre, validarPrecio, validarImagen } from "./Validaciones.js";
+import { listarProductos } from "./generarCards.js";
 
 //AGREGAR PRODUCTOS
 const enviarFormulario = document.querySelector("[data-enviar]");
@@ -13,23 +14,23 @@ async function agregarProducto(evento) {
   const precioString = document.querySelector("[data-precio]").value;
   const precio = parseInt(precioString);
 
-   //VALIDACIONES
-   let hayErrores = false;
-   
-   // Limpiar mensajes de error anteriores en el SPAN
-    const msjErrores = document.querySelectorAll(".mensajeError");
-    msjErrores.forEach(error => error.textContent = "");
-  
-  if (!validarNombre(nombre)) {  
+  //VALIDACIONES
+  let hayErrores = false;
+
+  // Limpiar mensajes de error anteriores en el SPAN
+  const msjErrores = document.querySelectorAll(".mensajeError");
+  msjErrores.forEach(error => error.textContent = "");
+
+  if (!validarNombre(nombre)) {
     document.getElementById("errorNombre").textContent = "El nombre debe tener entre 3 y 30 caracteres";
     hayErrores = true;
   }
 
-  if (!validarPrecio(precio)) {   
+  if (!validarPrecio(precio)) {
     document.getElementById("errorPrecio").textContent = "El precio no puede ser negativo";
     hayErrores = true;
   }
- 
+
   if (!validarImagen(imagen)) {
     document.getElementById("errorImagen").textContent = "La URL de la imagen debe ser válida (jpg, jpeg, png o gif)";
     hayErrores = true;
@@ -42,7 +43,13 @@ async function agregarProducto(evento) {
 
   try {
     await conexionAPI.enviarProducto(nombre, precio, imagen);
-    alert(`Producto "${nombre}" agregado con éxito`); 
+    alert(`Producto "${nombre}" agregado con éxito`);
+    listarProductos(); // Recargar los productos después de agregar uno nuevo
+
+    // Limpiar los campos del formulario después de agregar el producto con éxito
+    document.querySelector("[data-imagen]").value = "";
+    document.querySelector("[data-nombre]").value = "";
+    document.querySelector("[data-precio]").value = "";
   } catch (error) {
     console.log(error);
   }
@@ -53,14 +60,15 @@ async function agregarProducto(evento) {
 async function eliminarProducto(idProducto) {
   // Convertir el ID del producto a número
   idProducto = parseInt(idProducto);
-  const url = `http://localhost:3001/productos/${idProducto}`;
-  const conexion = await fetch (url, {
+  const url = `https://fake--api.vercel.app/productos/${idProducto}`;
+  const conexion = await fetch(url, {
     method: "DELETE"
   });
 
   if (conexion.ok) {
     // Mostrar una alerta indicando que el producto ha sido eliminado
     alert("Producto eliminado correctamente.");
+    listarProductos(); // Recargar los productos después de agregar uno nuevo
   } else {
     throw new Error(`No se pudo eliminar el producto con ID ${idProducto}`);
   }
@@ -82,10 +90,3 @@ export function asignarEventListeners() {
     }
   });
 }
-
-
-
-
-
-
-
